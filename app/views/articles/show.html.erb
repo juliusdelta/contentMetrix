@@ -1,2 +1,13 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<h1>Article</h1>
+<p>
+    <%= @article.title %> </br>
+</p>
+
+<p>
+    <%= @article.link %> </br>
+</p>
+
+<p>
+    submitted <%= time_ago_in_words(@article.created_at) %> ago </br>
+</p>
+
