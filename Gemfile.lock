@@ -148,6 +148,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    ruby-oembed (0.10.1)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -205,6 +206,7 @@ DEPENDENCIES
   rails-controller-testing
   rails_12factor
   rspec-rails (~> 3.5)
+  ruby-oembed
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

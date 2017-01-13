@@ -1,13 +1,23 @@
-<h1>Article</h1>
-<p>
+<div class="container">
+    <h1>Article</h1>
+    <%= link_to "All Articles", articles_path, class: 'btn waves-effect waves-light blue', type: 'submit' %>
+    <p>
     <%= @article.title %> </br>
-</p>
+    </p>
 
-<p>
+    <p>
     <%= @article.link %> </br>
-</p>
+    </p>
 
-<p>
+
+    <p>
+      <% resource = oembed_helper(@article.link) %>
+      <img src=<%= resource.thumbnail_url %>>
+      <%= resource.title %>
+      
+    </p>
+
+    <p>
     submitted <%= time_ago_in_words(@article.created_at) %> ago </br>
-</p>
-
+    </p>
+</div>
