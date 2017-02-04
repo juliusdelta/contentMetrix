@@ -14,6 +14,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass'
+# State Machine
+gem 'aasm'
 
 
 group :development, :test do
