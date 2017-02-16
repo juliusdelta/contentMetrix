@@ -13,9 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-
       @article = Article.new(params.require(:article).permit(:title, :link))
-
       @article.save
       redirect_to @article
   end
@@ -25,6 +23,25 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article = Article.find(params[:id])
+    @article.title = params[:article][:title]
+    @article.link = params[:article][:link]
+    @article.aasm_state = params[:article][:aasm_state]
+  end
+
+  def approve
+    @article = Article.find(params[:id])
+    @article.approve!
+  end
+
+  def write
+    @article = Article.find(params[:id])
+    @article.write!
+  end
+  
+  def publish
+    @article = Article.find(params[:id])
+    @article.publish!
   end
 
 end

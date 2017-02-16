@@ -4,10 +4,39 @@
 
     <br>
     <% @article.each do |article| %>
-        <p>
-            <%= link_to article.title, article %> 
-            <%= article.link %>
-            <%= article.aasm_state %>
-        </p>
+        <div class="row">
+            <% if article.aasm_state == "source" %>
+                <div class="col s3">
+                    <%= link_to article.title, article %>
+                    <%= article.link %>
+                    <%= article.aasm_state %>
+                </div>
+            <% end %>
+
+            <% if article.aasm_state == "approved" %>
+                <div class="col s3 push-s3">
+                    <%= link_to article.title, article %>
+                    <%= article.link %>
+                    <%= article.aasm_state %>
+                </div>
+            <% end %>
+
+            <% if article.aasm_state == "writing" %>
+                <div class="col s3 push-s6">
+                    <%= link_to article.title, article %>
+                    <%= article.link %>
+                    <%= article.aasm_state %>
+                </div>
+            <% end %>
+
+            <% if article.aasm_state == "publishing" %>
+                <div class="col s3 push-s9">
+                    <%= link_to article.title, article %>
+                    <%= article.link %>
+                    <%= article.aasm_state %>
+                </div>
+            <% end %>
+        </div>
     <% end %>
+
 </div>
