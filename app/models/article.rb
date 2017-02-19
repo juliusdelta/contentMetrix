@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   include AASM
+  attr_accessor :state_event
 
   aasm do
     state :source, :initial => true

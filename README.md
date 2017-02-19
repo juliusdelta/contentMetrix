@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Rails 5.0.0.1
+ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin15]
