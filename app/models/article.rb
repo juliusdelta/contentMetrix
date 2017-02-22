@@ -19,5 +19,6 @@ class Article < ApplicationRecord
     event :publish do
       transitions :from => :writing, :to => :publishing
     end
+
   end
 end
